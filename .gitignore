@@ -1,33 +1,72 @@
-HELP.md
-target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# Compilados Java
+*.class
+*.jar
+*.war
+*.ear
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# Diretórios de build
+/target/
+/build/
 
-### IntelliJ IDEA ###
-.idea
-*.iws
+# Logs
+*.log
+/logs/
+
+# Configs do sistema
 *.iml
+.idea/
 *.ipr
+*.iws
+*.bak
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
 
-### VS Code ###
+# Diretórios de IDEs
 .vscode/
+.project
+.classpath
+.settings/
+
+# Arquivos do Maven
+.mvn/
+!**/src/main/**/.mvn/wrapper/maven-wrapper.jar
+
+# Arquivos do Gradle (caso use)
+.gradle/
+/build/
+
+# Arquivos de execução
+*.pid
+*.hprof
+
+# Arquivos temporários
+*.swp
+*.tmp
+
+# Docker
+*.env
+docker-compose.override.yml
+**/.docker/
+
+# Mongo dump/output temporário
+dump/
+*.bson
+*.json
+
+# Kafka data local (caso use volumes locais para debug)
+kafka-logs/
+zookeeper-logs/
+
+# Teste
+/coverage/
+jacoco.exec
+
+# IntelliJ cache
+/out/
+
+# Arquivos de teste e exportações do MongoDB Compass
+*.mongodb.js
+*.mongo.json
+*.csv
