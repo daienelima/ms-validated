@@ -35,16 +35,7 @@ Kafka Topic: tp-cpf-send-validated
         ↓
 Kafka Topic: tp-cpf-validation-received
 ```
-
 ---
-
-## ⚙️ Como executar
-
-### Requisitos
-
-- Kafka rodando em `localhost:9092`
-- Docker (opcional para dependências)
-
 ### Comando
 
 ```bash
@@ -66,18 +57,20 @@ Kafka Topic: tp-cpf-validation-received
 
 O projeto segue a Arquitetura Hexagonal (Ports & Adapters), que promove o desacoplamento entre regras de negócio e tecnologias externas.
 
-### Estrutura de pacotes
-
-- `br.com.hexagonal.adapters`  
-  Contém os adaptadores de entrada (`in`) e saída (`out`) da aplicação.
-- `br.com.hexagonal.application`  
-  Camada de aplicação, onde estão definidos os casos de uso (`core`) e as portas (`ports`).
-- `br.com.hexagonal.config`  
-  Configurações do Spring Boot, incluindo Kafka Producer e Consumer.
-- `br.com.hexagonal.HexagonalApplication`  
-  Classe principal da aplicação.
-
----
+## 📁 Estrutura do Projeto
+```
+src/main/java/com/validated/app
+├── adapters
+│   ├── in
+│   └── out
+├── application
+│   ├── core
+│   └── ports
+├── config
+│   ├── KafkaConsumerConfig.java
+│   ├── KafkaProducerConfig.java
+├── Application.java
+```
 
 ## 👩‍💻 Autor
 
