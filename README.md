@@ -76,8 +76,3 @@ src/main/java/com/validated/app
 
 - Daiene Lima — [@daienelima](https://github.com/daienelima)
 
----
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT.
